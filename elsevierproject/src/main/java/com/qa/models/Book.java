@@ -12,7 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 @Entity
 public class Book {
-	
+	//LS - testing commit to "Liam" branch
 	@Id
 	private int bookId;
 	
