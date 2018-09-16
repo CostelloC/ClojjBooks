@@ -13,7 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 @Entity
 public class Book {
 	
-	//JR testing commit
+	//JR testing commit try 2
 	
 	@Id
 	private int bookId;
