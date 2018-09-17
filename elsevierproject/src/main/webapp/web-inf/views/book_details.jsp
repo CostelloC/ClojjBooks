@@ -112,14 +112,14 @@
 
         <a href="/addToCart?bookId=<%=book.getBookId()%>" class="button large expanded">Add to Cart</a>
 
-        <!-- <div class="small secondary expanded button-group">
+        <div class="small secondary expanded button-group">
             <a class="button">Facebook</a>
             <a class="button">Twitter</a>
             <a class="button">Yo</a>
-          </div> -->
+          </div>
         </div>
     </div>
-<!--  
+
     <div class="column row">
       <hr>
       <ul class="tabs" data-tabs id="example-tabs">
@@ -198,7 +198,7 @@
         </div>
       </div>
     </div>
--->
+
     <div class="row column">
       <hr>
       <ul class="menu">
