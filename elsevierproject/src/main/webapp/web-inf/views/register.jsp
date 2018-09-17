@@ -43,13 +43,13 @@
         <div class="medium-6">
            <h3> Create an account  </h3>
                 
-                
+             
                <label>Firstname * </label>
                <input type="text" placeholder="Enter firstname" name="firstName" id="firstName" required/> 
                <label>Lastname * </label>
                <input type="text" placeholder="Enter lastname" name="lastName" id="lastName" required/> 
-               <label>Email ID * </label>
-                <input type="text" placeholder="Enter email" name="email" id="email" required/> 
+               <label>Email * </label>
+                <input type="text" pattern="[^ @]*@[^ @]*"   placeholder="Enter email" name="email" id="email" required/> 
                 <label>Password * </label>
 				 <input type="password" placeholder="Enter Password" name="password" id="password" required/>
             	
