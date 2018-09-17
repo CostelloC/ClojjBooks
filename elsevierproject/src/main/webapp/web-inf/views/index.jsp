@@ -72,7 +72,7 @@
         <h5><%= book.getTitle()%></h5>
         <p>$<%= book.getPrice()%></p>
         <a href="/bookDetails?bookId=<%=book.getBookId()%>" class="button expanded">View book details</a>
-        <a href="/addToCart?bookId=" class="button expanded">Add to Cart</a>
+        <a href="/addToCart?bookId=<%=book.getBookId()%>" class="button expanded">Add to Cart</a>
       </div>
     
     <%
