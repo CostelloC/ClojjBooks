@@ -17,6 +17,7 @@
       <div class="top-bar-left">
         <ul class="menu">
           <li class="menu-text" style="color:red">Online Shopping</li>
+          <li> <input type = "text" placeholder = "Search.."></li>
           <li><a href="#">Home</a></li>
           
         </ul>
