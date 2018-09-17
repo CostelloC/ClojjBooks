@@ -167,7 +167,7 @@ public class BookController {
 	
 	
 	
-	public boolean findBookInCart(ArrayList<Integer> cartItems,int bookId)
+	/*public boolean findBookInCart(ArrayList<Integer> cartItems,int bookId)
 	{
 		
 		//Uncommented
@@ -186,7 +186,7 @@ public class BookController {
 		
 		
 		
-	}
+	}*/
 	
 	
 	
