@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 
+import java.util.Set;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -145,9 +147,9 @@ public class BookController {
 	
 	
 	
-	/*public ArrayList<Book> loadBooksIntoCart(Iterable<Book> books,ArrayList<Integer> bookIds)
+	public ArrayList<Book> loadBooksIntoCart(Iterable<Book> books,ArrayList<Integer> bookIds)
 	{
-		
+		//Uncommented
 		ArrayList<Book> bookList = new ArrayList<>();
 		
 		for(Book book : books)
@@ -158,7 +160,7 @@ public class BookController {
 		}
 		
 		return bookList;
-	}*/
+	}
 	
 	
 	
@@ -168,17 +170,17 @@ public class BookController {
 	public boolean findBookInCart(ArrayList<Integer> cartItems,int bookId)
 	{
 		
+		//Uncommented
+		Set<Book> books = cartItems.keySet();
 		
-//		Set<Book> books = cartItems.keySet();
-//		
-//		
-//		for(Book b : books)
-//		{
-//			if(b.getBookId()==bookId)
-//			{
-//				bookFound = true;
-//			}
-//		}
+		boolean bookFound; //Added variable
+		for(Book b : books)
+		{
+			if(b.getBookId()==bookId)
+			{
+				bookFound = true;
+			}
+		}
 		
 		return cartItems.contains(bookId);
 		
