@@ -18,7 +18,7 @@
         <ul class="menu">
           <li> <img src="images/ClojjersLogo.JPG" width="250" height="250"> </li>
           <li> <input type = "text" placeholder = "Search.."></li>
-          <li><a href="#">Home</a></li>
+          <li><a href="/">Home</a></li>
           
         </ul>
       </div>
