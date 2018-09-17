@@ -143,7 +143,7 @@
       
       </div>
       <div class="medium-6 large-5 columns">
-        <%-- <h3>Order Summary </h3>
+        <h3>Order Summary </h3>
         <p> </p>
 
         <div class="row">
@@ -183,7 +183,7 @@
 		  
 		<input type="hidden" name="order_total" value="<%=orderTotal %>"/>   
         <input type="submit" class="button large expanded" value="Checkout"/>
-        --%>
+       
       </div>  
    
  </div>
