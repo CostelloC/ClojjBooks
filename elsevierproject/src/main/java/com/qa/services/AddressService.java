@@ -10,7 +10,7 @@ import com.qa.repositories.AddressRepository;
 public class AddressService {
 
 	@Autowired
-	private AddressRepository addressRespository;
+	private AddressRepository addressRepository;
 	
 	
 	
@@ -25,7 +25,7 @@ public class AddressService {
 			String addressType
 			){
 		
-		return addressRespository.updateBillingAddress(addressLine1, addressLine2, city, postcode, state, country, phoneNumber, customerId, addressType);
+		return addressRepository.updateBillingAddress(addressLine1, addressLine2, city, postcode, state, country, phoneNumber, customerId, addressType);
 		
 		
 	}
@@ -33,13 +33,13 @@ public class AddressService {
 	
 	public Address findAddressByType(int customerId,String addressType){
 		
-		return addressRespository.findAddressByType(customerId, addressType);
+		return addressRepository.findAddressByType(customerId, addressType);
 	}
 	
 	public Address saveAddress(Address address)
 	{
 		
-		return addressRespository.save(address);
+		return addressRepository.save(address);
 	}
 
 	
