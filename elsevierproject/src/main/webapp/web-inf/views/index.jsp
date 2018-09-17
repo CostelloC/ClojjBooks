@@ -30,7 +30,8 @@
               <a href="/viewCart"><img src="images/cart.jpg" width="50" height="50"/></a>
               <ul class="submenu menu vertical" data-submenu>
                 <li><a href="/viewCart"><img src="images/cart.jpg" width="50" height="50"/></a></li>
-                <li><a href="/login">Register | Login</a></li>
+                <li><a href="/login">Login</a></li>  
+                <li><a href="/register">Register</a></li>
               </ul>
             </li>
             <li><a href="#">About Us</a></li>
