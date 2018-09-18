@@ -204,7 +204,7 @@
         </div>
 
 		<form action="checkoutProcess" id="checkout_form">
-		<input type="hidden" name="order_total" value="<%=orderTotal %>"/>   
+		<input type="hidden" name="order_total" value="<%=orderTotal%>"/>   
         <input type="submit" class="button large expanded" value="Checkout"/>
        </form>
       </div> 
@@ -255,11 +255,21 @@
        
       </div>  
    
- </div>
+</div>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="js/elsevier.js"></script>
     <script src="js/update_cart.js"></script>
-    
+    <!-- need to multipl java orderTotal by 100 for data-amount--> 
+      <script
+          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="pk_test_TYooMQauvdEDq54NiTphI7jx"
+          data-amount="999" 
+          data-name="clojjersbookstore.com"
+          data-description="Cart Total"
+          data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+          data-locale="auto"
+          data-zip-code="true">
+        </script>
     <script src="js/validations.js"></script>
     <script>
       $(document).foundation();

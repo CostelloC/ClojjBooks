@@ -102,10 +102,8 @@
         <label>Select the format
         <select required>
           <option value="" disabled selected>-- Select --</option>
-          <option value="var x=<%=book.getPaperISBN()%>">Paperback</option>
+          <option value="<%=book.getPaperISBN()%>">Paperback</option>
           <option value="<%=book.geteBookISBN()%>">eBook</option>
-          <option value="print">Paperback</option>
-          <option value="eBook">eBook</option>
           <option value="printAndeBook">PrintBook and eBook</option>
         </select>
         </label>
