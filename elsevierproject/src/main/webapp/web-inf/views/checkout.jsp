@@ -205,8 +205,25 @@
 
 		<form action="checkoutProcess" id="checkout_form">
 		<input type="hidden" name="order_total" value="<%=orderTotal%>"/>   
-        <input type="submit" class="button large expanded" value="Checkout"/>
-       </form>
+       <!--   <input type="submit" class="button large expanded" value="Checkout"/>-->
+            
+        <script
+          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="pk_test_TYooMQauvdEDq54NiTphI7jx"
+          data-amount=<%=orderTotal *100%>
+          data-name="clojjersbookstore.com"
+          data-description="Cart Total"
+          data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+          data-locale="auto"
+          data-zip-code="true">
+       </script>
+        <script>
+        // Hide default stripe button, be careful there if you
+        // have more than 1 button of that class
+        document.getElementsByClassName("stripe-button-el")[0].style.display = 'none';
+   		</script>
+       	<input type="submit" class="stripe-button" style="background-color:rgb(60, 179, 113)";color:white" value="Pay with card"/>
+       </form> 
       </div> 
       
       
@@ -260,21 +277,16 @@
     <script src="js/elsevier.js"></script>
     <script src="js/update_cart.js"></script>
     <!-- need to multipl java orderTotal by 100 for data-amount--> 
-      <script
-          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="pk_test_TYooMQauvdEDq54NiTphI7jx"
-          data-amount="999" 
-          data-name="clojjersbookstore.com"
-          data-description="Cart Total"
-          data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
-          data-locale="auto"
-          data-zip-code="true">
-        </script>
+
+
     <script src="js/validations.js"></script>
     <script>
       $(document).foundation();
     </script> 
-    
+     <div class="form-group" id="credit_cards">
+                <img src="/images/payment-logo.jpg" style="width:380px;height:256px; id="payment">
+
+            </div>
    </form>
   </body>
 </html>
