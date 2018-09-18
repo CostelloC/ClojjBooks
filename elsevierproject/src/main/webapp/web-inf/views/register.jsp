@@ -57,7 +57,7 @@
             
             <div class="medium-6">
            
-          	 <input type="checkbox" name="aggreement" required/> I have read and understood the 
+          	 <input type="checkbox" name="agreement" required/> I have read and understood the 
           	 <a href="/registered_user_agreement">Registered User Agreement </a> and agree to be bound by all of its terms. 
          
             </div>
