@@ -22,7 +22,7 @@
       </div>
       <div class="top-bar-right">
        	<ul class="menu">
-       	<li><a href="/viewCart"><img src="images/cart.jpg" width="50" height="50"/></a>
+       	<li><a href="/viewCart"><img src="images/cart.png" width="50" height="50"/></a>
        	
        	</ul>
              <ul class="dropdown menu" data-dropdown-menu>

@@ -42,33 +42,39 @@
     
    
 
-<!-- Start Top Bar -->
+ <!-- Start Top Bar -->
     <div class="top-bar">
       <div class="top-bar-left">
         <ul class="menu">
-          <li class="menu-text" style="color:red">Online Shopping</li>
+          <li> <img src="images/Picture1.png" width="250" height="250"> </li>
           <li><a href="/">Home</a></li>
+          <li><a href= "/about_us.html">About</a></li>
+          <li><a href= "Contact_us.html"> Contact Us</a></li>
+          <li> <input type = "text" placeholder = "Search for a book..."></li>
           
         </ul>
       </div>
       <div class="top-bar-right">
-        
+       	<ul class="menu">
+       	<li><a href="/viewCart"><img src="images/cart.png" width="50" height="50"/></a>
+       	
+       	</ul>
              <ul class="dropdown menu" data-dropdown-menu>
-            <li id="cart_items"></li>
+            
             <li class="has-submenu">
-              <a href="/viewCart"> <img src="images/cart.jpg" width="50" height="50"/></a>
+              <a href="/login.jsp">Login/Register</a>
               <ul class="submenu menu vertical" data-submenu>
-                <li><a href="/viewCart"><img src="images/cart.jpg" width="50" height="50"/> View Cart </a></li>
-                <li><a href="/login">Register | Login</a></li>
+                <li><a href="/login">Login</a></li>  
+                <li><a href="/register">Register</a></li>
               </ul>
             </li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact</a></li>
+          
           </ul>
           
       </div>
     </div>
     <!-- End Top Bar -->
+
     <br>
     <!-- You can now combine a row and column if you just need a 12 column row -->
     <div class="row columns">
