@@ -96,4 +96,8 @@
       $(document).foundation();
     </script> 
   </body>
+  
+  <footer>
+  <h4>Produced by Clojjers, peace out</h4>
+  </footer>
 </html>
