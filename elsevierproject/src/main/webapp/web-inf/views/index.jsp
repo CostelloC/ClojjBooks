@@ -52,7 +52,7 @@
 
     
     <div class="row column text-center">
-      <h2>Our Newest Books
+      <h3>Browse our books
       
       
       <%
@@ -61,7 +61,7 @@
       %>
       
       
-      </h2>
+      </h3>
       <hr>
     </div>
 
