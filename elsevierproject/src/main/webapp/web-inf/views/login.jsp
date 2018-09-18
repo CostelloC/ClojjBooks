@@ -13,7 +13,7 @@
       <div class="top-bar-left">
         <ul class="menu">
           <li class="menu-text" style="color:red">Online Shopping</li>
-          <li><a href="#">Home</a></li>
+          <li><a href="/">Home</a></li>
           
         </ul>
       </div>
@@ -45,10 +45,10 @@
                 
                <form action="loginProcess" method="post"> 
               
-               <label>Email ID * </label>
-                <input type="text" placeholder="Enter email" name="email" id="email"/> 
+               <label>Email * </label>
+                <input type="text" placeholder="Enter email" pattern="[^ @]*@[^ @]*"   name="email" id="email" required/> 
                 <label>Password * </label>
-				 <input type="password" placeholder="Enter Password" name="password" id="password"/>
+				<input type="password" placeholder="Enter Password" name="password" id="password" required/>
             	<input type="submit" class="button expanded" value="Login">
               
               </form>

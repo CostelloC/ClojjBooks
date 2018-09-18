@@ -18,7 +18,7 @@
         <ul class="menu">
           <li> <img src="images/ClojjersLogo.JPG" width="250" height="250"> </li>
           <li> <input type = "text" placeholder = "Search.."></li>
-          <li><a href="#">Home</a></li>
+          <li><a href="/">Home</a></li>
           
         </ul>
       </div>
@@ -30,7 +30,8 @@
               <a href="/viewCart"><img src="images/cart.jpg" width="50" height="50"/></a>
               <ul class="submenu menu vertical" data-submenu>
                 <li><a href="/viewCart"><img src="images/cart.jpg" width="50" height="50"/></a></li>
-                <li><a href="/login">Register | Login</a></li>
+                <li><a href="/login">Login</a></li>  
+                <li><a href="/register">Register</a></li>
               </ul>
             </li>
             <li><a href="#">About Us</a></li>
@@ -72,7 +73,7 @@
         <h5><%= book.getTitle()%></h5>
         <p>$<%= book.getPrice()%></p>
         <a href="/bookDetails?bookId=<%=book.getBookId()%>" class="button expanded">View book details</a>
-        <a href="/addToCart?bookId=" class="button expanded">Add to Cart</a>
+        <a href="/addToCart?bookId=<%=book.getBookId()%>" class="button expanded">Add to Cart</a>
       </div>
     
     <%

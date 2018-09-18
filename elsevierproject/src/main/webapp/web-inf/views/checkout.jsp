@@ -31,7 +31,7 @@
       <div class="top-bar-left">
         <ul class="menu">
           <li class="menu-text" style="color:red">Online Shopping</li>
-          <li><a href="#">Home</a></li>
+          <li><a href="/">Home</a></li>
           
         </ul>
       </div>
@@ -77,34 +77,34 @@
         
           <div class="columns">
             <label> Firstname * </label>
-            <input type="text" name="firstName" id="firstName" size="30"/> 
+            <input type="text" name="firstName" id="firstName" size="30" required/> 
           </div>
           <div class="columns">
              <label> Lastname * </label>
-            <input type="text" name="lastName" id="lastName" size="30"/>
+            <input type="text" name="lastName" id="lastName" size="30" required/>
           </div>
           
           <div class="column">
            <label> Address 1 * </label>
-            <input type="text" name="addressLine1" id="addressLine1" size="30"/>
+            <input type="text" name="addressLine1" id="addressLine1" size="30" required/>
           </div>
           <div class="column">
             <label> Address 2 * </label>
-            <input type="text" name="addressLine2" id="addressLine2" size="30"/>
+            <input type="text" name="addressLine2" id="addressLine2" size="30" required/>
           </div>
           <div class="column">
             <label> City * </label>
-            <input type="text" name="city" id="city" size="30"/>
+            <input type="text" name="city" id="city" size="30" required/>
           </div>
           
           <div class="column">
             <label> Postcode / Zip code * </label>
-            <input type="text" name="postcode" id="postcode" size="30"/>
+            <input type="text" name="postcode" id="postcode" size="30" required/>
           </div>
           
           <div class="column">
             <label> State/Province * </label>
-            <input type="text" name="state" id="state" size="30"/>
+            <input type="text" name="state" id="state" size="30" required/>
           </div>
           
           <div class="column">
@@ -120,12 +120,12 @@
           
            <div class="column">
             <label> Email * </label>
-            <input type="text" name="email" id="email" size="30"/>
+            <input type="text" name="email" pattern="[^ @]*@[^ @]*" id="email" size="30" required/>
           </div>
           
           
           <div class="column">
-            <input type="checkbox" name="same" id="same"/> My billing and shipping address are the same
+            <input type="checkbox" name="same" id="same" required/> My billing and shipping address are the same
           </div>
           
         </div>
