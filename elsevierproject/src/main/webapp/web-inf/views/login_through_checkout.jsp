@@ -44,8 +44,8 @@
            <h3> Please login using your stored credentials  </h3>
                 
                <form action="/loginProcessThroughCheckout" method="post"> 
-                <input type="text" placeholder="Enter email" name="email" id="email"/>
-				 <input type="password" placeholder="Enter Password" name="password" id="password"/>
+                <input type="text" placeholder="Enter email" pattern="[^ @]*@[^ @]*" name="email" id="email"/>
+				 <input type="password" placeholder="Enter Password" name="password" id="password" required/>
             	<input type="submit" class="button expanded" value="Submit">
               
               </form>

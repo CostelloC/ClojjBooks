@@ -12,10 +12,6 @@ var state = $("#state").val();
 var country = $("#country").val();
 
 
-var email = $("#email").val();
-
-
-
 
 if (firstname === '' && lastname === '' && address1 === '' &&
         

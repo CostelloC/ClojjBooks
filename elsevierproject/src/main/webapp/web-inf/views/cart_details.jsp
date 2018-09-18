@@ -202,6 +202,7 @@
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="js/elsevier.js"></script>
     <script src="js/update_cart.js"></script>
+     <script src="js/validation.js"></script>
     <script>
       $(document).foundation();
     </script> 

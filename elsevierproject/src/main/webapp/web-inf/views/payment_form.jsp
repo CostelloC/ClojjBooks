@@ -68,7 +68,7 @@
       </nav>
     </div>
 
-    <div class="row">
+   <!--  <div class="row">  -->
  
       <div class="medium-6 columns">
       
@@ -76,7 +76,65 @@
         
         <div class="row small-up-shiping">
         
-          <div class="columns">
+        <div class="creditCardForm">
+    <div class="heading">
+ 
+    </div>
+    <div class="payment">
+     
+            <div class="form-group owner">
+                <label for="owner">Owner</label>
+                <input type="text" class="form-control" id="owner">
+            </div>
+            <div class="form-group CVV">
+                <label for="cvv">CVV</label>
+                <input type="text" class="form-control" id="cvv">
+            </div>
+            <div class="form-group" id="card-number-field">
+                <label for="cardNumber">Card Number</label>
+                <input type="text" class="form-control" id="cardNumber">
+            </div>
+            <div class="form-group" id="expiration-date">
+                <label>Expiration Date</label>
+                <select>
+                    <option value="01">January</option>
+                    <option value="02">February </option>
+                    <option value="03">March</option>
+                    <option value="04">April</option>
+                    <option value="05">May</option>
+                    <option value="06">June</option>
+                    <option value="07">July</option>
+                    <option value="08">August</option>
+                    <option value="09">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+                <select>
+                    
+                    <option value="18"> 2018</option>
+                    <option value="19"> 2019</option>
+                    <option value="20"> 2020</option>
+                    <option value="21"> 2021</option>
+                    <option value="22"> 2022</option>
+                    <option value="23"> 2023</option>
+                </select>
+            </div>
+            <div class="form-group" id="credit_cards">
+             <!--   <img src="images/visa.png" id="visa"> -->
+                <img src="/images/payment-logo.jpg" id="mastercard">
+           <!--     <img src="assets/images/amex.jpg" id="amex"> -->
+            </div>
+            <div class="form-group" id="pay-now">
+                 <input type="submit" class="button expanded" value="Submit"/>   </div>
+      
+    </div>
+</div>
+        
+        
+        
+        
+          <!--   %>div class="columns">
             <label> Firstname * </label>
             <input type="text" name="firstName" id="firstName" size="30" required/> 
           </div>
@@ -129,7 +187,7 @@
             <input type="checkbox" name="same" id="same"/> My billing and shipping address are the same
           </div>
           
-        </div>
+        </div>-->
         
         <div class="row small-up-4">
           
@@ -142,7 +200,11 @@
         <hr>
       
       </div>
-      <div class="medium-6 large-5 columns">
+       <div class="row small-up-4">
+          
+          <div class="column">
+           
+      <div class="medium-1 large-4 columns">
         <h3>Order Summary </h3>
         <p> </p>
 
@@ -179,19 +241,15 @@
            </div>
       
         </div>
-
+</div>
+</div>
 		  
 		<input type="hidden" name="order_total" value="<%=orderTotal %>"/>   
-        <input type="submit" class="button large expanded" value="Checkout"/>
        
       </div>  
    
  </div>
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="js/elsevier.js"></script>
-    <script src="js/update_cart.js"></script>
-    
-    <script src="js/validations.js"></script>
+    <script src="js/platform.js"></script>
     <script>
       $(document).foundation();
     </script> 
