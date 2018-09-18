@@ -35,8 +35,99 @@
       </div>
     </div>
     <!-- End Top Bar -->
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 16px;
+    background-color: white;
+}
+
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+
+.submitbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.submitbtn:hover {
+    opacity: 1;
+}
+
+a {
+    color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.backtohome {
+    background-color: #f1f1f1;
+    text-align: center;
+}
+</style>
+</head>
     
-    <h1>CONTACT US</h1>
-    <h3> CLOJJERS ROCK! </h3>
-    <p> Use this form if you want to send us a message!</p>
+    <form action="message_sent.html">
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p>Please fill in this form to request a book or just to have a chat!.</p>
+    <hr>
+    
+ 	 <label for="firstname"><b>First Name *</b></label>
+    <input type="text" placeholder="Enter First Name" name="firstname" required>
+    <br>
+    <label for="lastname"><b>Last Name *</b></label>
+    <input type="text" placeholder="Enter Last Name" name="lastname" required>
+    <br>
+    <label for="email"><b>Email *</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+    <br>
+    <label for="message"><b>Message *</b></label>
+    <input type="text" placeholder="Enter message here" name="email" required>
+    
+    <input type="submit" value="Submit">
+  <br><br>
+   </div>
+  
+  <div class="container backtohome">
+    <p>We aim to get back to you in 2-5 working days! <a href="/">Back to home</a>.</p>
+  </div>
+</form>
+
+</body>
+</html>
     
