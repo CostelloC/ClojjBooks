@@ -11,7 +11,11 @@
     <link rel="stylesheet" href="css/style.css"/>
   </head>
   <body>
-
+	<script type="text/javascript">
+		function newPopup(url){	popupWindow=window.open(url, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400");
+			
+		}
+	</script>
     <!-- Start Top Bar -->
     <div class="top-bar">
       <div class="top-bar-left">
@@ -73,8 +77,8 @@
         <h5><%= book.getTitle()%></h5>
         <p>$<%= book.getPrice()%></p>
         <a href="/bookDetails?bookId=<%=book.getBookId()%>" class="button expanded">View book details</a>
-        <a href="/addToCart?bookId=<%=book.getBookId()%>" class="button expanded">Add to Cart</a>
-      </div>
+        <a  href="JavaScript:newPopup('/bookDetails?bookId=<%=book.getBookId()%>');" class="button expanded">Add to Cart</a> <!-- /addToCart?bookId=<%=book.getBookId()%> -->
+              </div>
     
     <%
     }
