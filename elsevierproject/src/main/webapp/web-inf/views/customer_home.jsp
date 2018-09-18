@@ -24,35 +24,35 @@
     <div class="top-bar">
       <div class="top-bar-left">
         <ul class="menu">
-          <li class="menu-text" style="color:red">Online Shopping</li>
+          <li> <img src="images/Picture1.png" width="250" height="250"> </li>
           <li><a href="/">Home</a></li>
+          <li><a href= "/about_us.html">About</a></li>
+          <li><a href= "Contact_us.html"> Contact Us</a></li>
+          <li> <input type = "text" placeholder = "Search for a book..."></li>
           
         </ul>
       </div>
       <div class="top-bar-right">
-        
-            <ul class="dropdown menu" data-dropdown-menu>
-            <li id="cart_items"></li>
-            
-            <li><a href="/profile">Personal Details</a></li>
+       	<ul class="menu">
+       	 <li><a href="/profile">Personal Details</a></li>
             <li><a href="#">Address Book</a></li>
             <li><a href="#">Change Password </a></li>
             <li><a href="#">Order History </a></li>
              <li><a href="/logout">Logout</a></li>
-            <li class="has-submenu">
-              <a href="/viewCart"> <img src="images/cart.png" width="50" height="50"/></a>
-              <ul class="submenu menu vertical" data-submenu>
-                <li><a href="/viewCart"><img src="images/cart.jpg" width="50" height="50"/></a></li>
-               
-              </ul>
+       	<li><a href="/viewCart"><img src="images/cart.png" width="50" height="50"/></a>
+       	
+       	</ul>
+           
             </li>
-            
+          
           </ul>
           
       </div>
     </div>
+    
     <!-- End Top Bar -->
 
+             
     <div class="callout large">
       <div class="row column text-center">
          
