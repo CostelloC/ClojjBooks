@@ -100,14 +100,15 @@
         <p><%=book.getDescription() %></p>
 
         <label>Select the format
-        <select>
-          <option value="">-- Select -- </option>
+        <select required>
+          <option value="" disabled selected>-- Select --</option>
+          <option value="var x=<%=book.getPaperISBN()%>">Paperback</option>
+          <option value="<%=book.geteBookISBN()%>">eBook</option>
           <option value="print">Paperback</option>
           <option value="eBook">eBook</option>
-          <option value="printAndeBook">PrintBook & eBook</option>
+          <option value="printAndeBook">PrintBook and eBook</option>
         </select>
         </label>
-
         
 
         <a href="/addToCart?bookId=<%=book.getBookId()%>" class="button large expanded">Add to Cart</a>
