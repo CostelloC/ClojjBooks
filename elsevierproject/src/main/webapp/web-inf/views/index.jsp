@@ -36,7 +36,7 @@
              <ul class="dropdown menu" data-dropdown-menu>
             
             <li class="has-submenu">
-              <a href="/login.jsp">My Account</a>
+              <a href="/login.jsp">Login/Register</a>
               <ul class="submenu menu vertical" data-submenu>
                 <li><a href="/login">Login</a></li>  
                 <li><a href="/register">Register</a></li>
