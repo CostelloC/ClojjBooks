@@ -34,8 +34,8 @@
                 <li><a href="/register">Register</a></li>
               </ul>
             </li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="/about_us.html">About Us</a></li>
+            <li><a href="/contact_us.html">Contact</a></li>
           </ul>
           
       </div>
