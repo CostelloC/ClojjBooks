@@ -63,7 +63,7 @@
             <div class="medium-6">
            
           	 <input type="checkbox" name="agreement" required/> I have read and understood the 
-          	 <a href="/useragreement.html">Registered User Agreement </a> and agree to be bound by all of its terms. 
+          	 <a href="https://www.sprint.com/business/resources/ratesandterms/Standard_Terms_and_Conditions_for_Communications_Services.pdf">Registered User Agreement </a> and agree to be bound by all of its terms. 
          
             </div>
       		
