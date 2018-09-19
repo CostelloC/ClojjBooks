@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 @SessionAttributes(names={"book_counts"})
@@ -36,7 +37,11 @@ public class CartController {
 		
 	}
 	
-	
+	//Method to check the "FullApplicationTest" - not used in code
+	@RequestMapping("/test1")
+	public @ResponseBody String greeting(){
+		return "Hello World";
+	}
 	
 	
 	

@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.qa.models.Address;
@@ -73,6 +74,11 @@ public class AddressBookController {
 			
 		}
 		return modelAndView;
+	}
+	//Method to check the "FullApplicationTest" - not used in code
+	@RequestMapping("/test")
+	public @ResponseBody String greeting(){
+		return "Hello World";
 	}
 	
 }
