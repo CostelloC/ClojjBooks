@@ -50,8 +50,8 @@ public class Address {
 		return addressId;
 	}
 
-	public void setAddressId(int addressId) {
-		this.addressId = addressId;
+	public void setAddressId(int val) {
+		this.addressId = val;
 	}
 
 	public String getAddressLine1() {
