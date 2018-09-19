@@ -12,7 +12,7 @@
   </head>
   <body>
 	<script type="text/javascript">
-		function newPopup(url){	popupWindow=window.open(url, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400");
+		function newPopup(url){	popupWindow=window.open(url, "_blank", "toolbar=no,scrollbars=no,resizable=yes,top=100,left=100,width=700,height=550");
 			
 		}
 	</script>
@@ -122,7 +122,7 @@ function filterFunction() {
         <h5><%= book.getTitle()%></h5>
         <p>$<%= book.getPrice()%></p>
         <a href="/bookDetails?bookId=<%=book.getBookId()%>" class="button expanded">View book details</a>
-        <a  href="JavaScript:newPopup('/bookDetails?bookId=<%=book.getBookId()%>');" class="button expanded">Add to Cart</a> <!-- /addToCart?bookId=<%=book.getBookId()%> -->
+        <a  href="JavaScript:newPopup('/quickcheckout?bookId=<%=book.getBookId()%>');" class="button expanded">Add to Cart</a> <!-- /addToCart?bookId=<%=book.getBookId()%> -->
               </div>
     
     <%

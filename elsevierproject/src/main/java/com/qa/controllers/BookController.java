@@ -36,6 +36,17 @@ public class BookController {
 		
 	}
 	
+	@RequestMapping("/quickcheckout")
+	public ModelAndView quickcheckout(@ModelAttribute("books") Iterable<Book> books,@RequestParam("bookId") int bookId)
+	{
+		Book book = findBookById(books, bookId);
+		
+		ModelAndView modelAndView = new ModelAndView("quickCheckout","book",book);
+		modelAndView.addObject("books", books);
+		return modelAndView;
+		
+	}
+	
 	
 	@RequestMapping("/addToCart")
 	public ModelAndView addToCart(@ModelAttribute("books") Iterable<Book> books,
