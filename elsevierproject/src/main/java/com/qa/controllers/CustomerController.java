@@ -193,6 +193,8 @@ public class CustomerController {
 	    return modelAndView;
 	}
 	
+	//Test for order_history.jsp
+	
 	@RequestMapping("/orderHistory")
 	public ModelAndView orderHistory(@ModelAttribute("logged_in_customer") Customer loggedInCustomer)
 	{
@@ -200,6 +202,5 @@ public class CustomerController {
 	
 	    return modelAndView;
 	}
-	
 	
 }

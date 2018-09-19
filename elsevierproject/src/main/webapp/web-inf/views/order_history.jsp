@@ -62,7 +62,7 @@
        
        <div class="row column">
         
-        <form action="/updateProfile" method="post">
+        <form action="/updateOrderHistory" method="post">
         <div class="medium-6">
            <h3> Account details </h3>
                 
