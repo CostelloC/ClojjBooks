@@ -1,4 +1,4 @@
-//Tests the entire application without using the server
+/*//Tests the entire application without using the server
 
 package com.qa;
 
@@ -31,3 +31,4 @@ public class FullApplicationTest {
 	}
 }
 //This test is looking through entire application to find @RequestMapping(/test) and see if it contains "Hello World" string
+*/

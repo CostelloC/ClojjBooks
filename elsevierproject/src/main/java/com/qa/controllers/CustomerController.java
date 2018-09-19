@@ -193,7 +193,13 @@ public class CustomerController {
 	    return modelAndView;
 	}
 	
+	@RequestMapping("/orderHistory")
+	public ModelAndView orderHistory(@ModelAttribute("logged_in_customer") Customer loggedInCustomer)
+	{
+		ModelAndView modelAndView = new ModelAndView("order_history","logged_in_customer",loggedInCustomer);
 	
+	    return modelAndView;
+	}
 	
 	
 }

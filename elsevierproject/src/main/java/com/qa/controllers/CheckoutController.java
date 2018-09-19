@@ -13,7 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.qa.models.Shipping;
 
-@SessionAttributes(names={"book_counts"})
+@SessionAttributes(names={"book_counts", "logged_in_customer"})
 @Controller
 public class CheckoutController {
 
