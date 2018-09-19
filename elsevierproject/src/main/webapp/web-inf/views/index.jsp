@@ -12,7 +12,7 @@
   </head>
   <body>
 	<script type="text/javascript">
-		function newPopup(url){	popupWindow=window.open(url, "_blank", "toolbar=no,scrollbars=no,resizable=yes,top=100,left=100,width=700,height=550");
+		function newPopup(url){	popupWindow=window.open(url, "_blank", "toolbar=no,scrollbars=yes,resizable=yes,top=100,left=100,width=700,height=550");
 			
 		}
 	</script>
