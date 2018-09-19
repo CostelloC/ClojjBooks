@@ -4,8 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.qa.models.Address;
@@ -13,7 +11,6 @@ import com.qa.models.Customer;
 import com.qa.services.AddressService;
 
 @Controller
-@SessionAttributes("logged_in_customer")
 public class AddressBookController {
 
 	@Autowired
@@ -77,10 +74,12 @@ public class AddressBookController {
 		}
 		return modelAndView;
 	}
-	//Method to check the "FullApplicationTest" - not used in code
+	
+}
+/*	//Method to check the "FullApplicationTest" - not used in code
 	@RequestMapping("/test")
 	public @ResponseBody String greeting(){
 		return "Hello World";
 	}
 	
-}
+}*/
