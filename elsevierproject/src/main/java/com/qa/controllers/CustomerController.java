@@ -193,4 +193,57 @@ public class CustomerController {
 	    return modelAndView;
 	}
 	
+	//Test for order_history.jsp
+	
+	@RequestMapping("/orderHistory")
+	public ModelAndView orderHistory(@ModelAttribute("logged_in_customer") Customer loggedInCustomer)
+	{
+		ModelAndView modelAndView = new ModelAndView("order_history","logged_in_customer",loggedInCustomer);
+	
+	    return modelAndView;
+	}
+	
+	
+	
+	
+	@RequestMapping("/updateOrderHistory")
+	public ModelAndView updateOrderHistory(@ModelAttribute("logged_in_customer") Customer loggedInCustomer, @ModelAttribute("Customer") Customer customer)
+	{
+		
+		ModelAndView modelAndView  = null;
+		
+		System.out.println("Before update ");
+
+		System.out.println("ID "+loggedInCustomer.getCustomerId());
+		System.out.println("Name"+loggedInCustomer.getFirstName());
+		System.out.println("Email"+loggedInCustomer.getEmail());
+		
+		
+		int recordsUpdated = customerService.updateCustomer(loggedInCustomer.getFirstName(),
+				loggedInCustomer.getLastName(),
+				loggedInCustomer.getEmail(), 
+				loggedInCustomer.getCustomerId());
+		
+		if(recordsUpdated>0)
+		{
+			Customer c  = customerService.findCustomerById(loggedInCustomer.getCustomerId());
+		
+			
+			System.out.println("After update ");
+
+			System.out.println("ID "+c.getCustomerId());
+			System.out.println("Name"+c.getFirstName());
+			System.out.println("Email"+c.getEmail());
+			
+			
+			modelAndView = new ModelAndView("order_history","logged_in_customer",c);
+		}
+		else
+		{
+			modelAndView = new ModelAndView("order_history","logged_in_customer",loggedInCustomer);
+		}
+		
+		return modelAndView;
+	}
+	
 }
