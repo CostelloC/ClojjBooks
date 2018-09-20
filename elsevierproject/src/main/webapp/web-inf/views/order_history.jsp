@@ -87,48 +87,49 @@ function filterFunction() {
     
     <!-- End Top Bar -->
 
-
     <div class="callout large">
       <div class="row column text-center">
         
         <h3>You have logged in as <%=c.getFirstName() %></h3>
        </div>
-       
-       
-       <div class="row column">
-        
-        <form action="/updateOrderHistory" method="post">
-        <div class="medium-6">
-           <h3> Account details </h3>
-                
-                
-               <label>Firstname * </label>
-               <input type="text" placeholder="Enter firstname" name="firstName" id="firstName" value="<%=c.getFirstName() %>"/> 
-               <label>Lastname * </label>
-               <input type="text" placeholder="Enter lastname" name="lastName" id="lastName" value="<%=c.getLastName()%>"/> 
-               <label>Email ID * </label>
-                <input type="text" placeholder="Enter email" name="email" id="email" value="<%=c.getEmail()%>"/> 
-                
-            </div>
-            
-          
-      		
-      		<input type="submit" class="button create account" value="Update Account">
-              
-              </form>
-    
-      
-      
       </div>
-       
-       
-       
-       
-       
-       
-       
-    </div>
+
+<!-- Beginning of indexedDB order history -->
+
+<script type = "text/javascript">
+
+var idbSupported = false;
+ 
+ document.addEventListener("DOMContentLoaded", function(){) 
+     
+     if("indexedDB" in window) {
+     	idbSupported = true;
+     }
+         
+ if(idbSupported) {
+     var openRequest = indexedDB.open("orderHistory",1);
+
+     openRequest.onupgradeneeded = function(e) {
+         console.log("Upgrading...");
+     }
+
+     openRequest.onsuccess = function(e) {
+         console.log("Success!");
+         db = e.target.result;
+     }
+
+     openRequest.onerror = function(e) {
+         console.log("Error!");
+         console.dir(e);
+     }
+
+ } 
+ 	
+},false);
     
+var openRequest = indexedDB.open("orderHistory",1);
+    
+</script>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="js/elsevier.js"></script>
     <script>
