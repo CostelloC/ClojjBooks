@@ -290,10 +290,7 @@
     <script>
       $(document).foundation();
     </script> 
-     <div class="form-group" id="credit_cards">
-                <img src="/images/payment-logo.jpg" style="width:380px;height:256px; id="payment">
-
-            </div>
+    
    </form>
   </body>
 </html>
