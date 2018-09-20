@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clojjers Bookstore </title>
+    <title>Online Shopping </title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -17,7 +17,7 @@
   
   
   <%
- 		c = (Customer) session.getAttribute("logged_in_customer");
+        c = (Customer) session.getAttribute("logged_in_customer");
   %>
     
     <!-- Start Top Bar -->
@@ -33,27 +33,24 @@
 <button onclick="myFunction()" class="menu">Search</button>
   <div id="myDropdown" class="dropdown-content">
     <input type="text" placeholder="Type title here.." id="myInput" onkeyup="filterFunction()"> 
-	      <a href="/bookDetails?bookId=1">Gangsta Granny</a>
+          <a href="/bookDetails?bookId=1">Gangsta Granny</a>
           <a href= "/bookDetails?bookId=2">Muddle Earth</a>
           <a href= "/bookDetails?bookId=3"> The Lord of the Rings Deluxe Edition</a>
-        	<a href="/bookDetails?bookId=4">Harry Potter and the Philosopher's Stone</a>
-		<a href="/bookDetails?bookId=5">The Phoenix Project</a>
-		<a href="/bookDetails?bookId=6">The Communist Manifesto</a>
-		<a href="/bookDetails?bookId=7">Charlie and the Chocolate Factory</a>
-		<a href="/bookDetails?bookId=8">Of Mice and Men</a>
-	</div></div></li>
-	</ul>  		 
-		
+            <a href="/bookDetails?bookId=4">Harry Potter and the Philosopher's Stone</a>
+        <a href="/bookDetails?bookId=5">The Phoenix Project</a>
+        <a href="/bookDetails?bookId=6">The Communist Manifesto</a>
+        <a href="/bookDetails?bookId=7">Charlie and the Chocolate Factory</a>
+        <a href="/bookDetails?bookId=8">Of Mice and Men</a>
+    </div></div></li>
+    </ul>          
+        
      
       </div>
   
-
-
 <script>
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
-
 function filterFunction() {
     var input, filter, ul, li, a, i;
     input = document.getElementById("myInput");
@@ -69,25 +66,26 @@ function filterFunction() {
     }
 }
 </script>
-
       <div class="top-bar-right">
-       	<ul class="menu">
-       	 <li><a href="/profile">Personal Details</a></li>
-            <li><a href="/addressBook">Address Book</a></li>
-            <li><a href="/password">Change Password </a></li>
-            <li><a href="/orderHistory">Order History </a></li>
-             <li><a href="/">Logout</a></li>
-       	<li><a href="/viewCart"><img src="images/cart.png" width="50" height="50"/></a>
-       	
-       	</ul>
-           
-       
+        <ul class="menu">
+        <li><a href="/viewCart"><img src="images/cart.jpg" width="50" height="50"/></a>
+        
+        </ul>
+             <ul class="dropdown menu" data-dropdown-menu>
+            
+            <li class="has-submenu">
+              <a href="/login.jsp">Login/Register</a>
+              <ul class="submenu menu vertical" data-submenu>
+                <li><a href="/login">Login</a></li>  
+                <li><a href="/register">Register</a></li>
+              </ul>
+            </li>
+          
+          </ul>
+          
       </div>
     </div>
-    
     <!-- End Top Bar -->
-
-
     <div class="callout large">
       <div class="row column text-center">
         
@@ -97,23 +95,23 @@ function filterFunction() {
        
        <div class="row column">
         
-        <form action="/updateProfile" method="post">
+        <form action="/update_password" method="post">
         <div class="medium-6">
            <h3> Account details </h3>
                 
                 
                <label>Firstname * </label>
-               <input type="text" placeholder="Enter firstname" name="firstName" id="firstName" value="<%=c.getFirstName() %>"/> 
-               <label>Lastname * </label>
-               <input type="text" placeholder="Enter lastname" name="lastName" id="lastName" value="<%=c.getLastName()%>"/> 
-               <label>Email ID * </label>
-                <input type="text" placeholder="Enter email" name="email" id="email" value="<%=c.getEmail()%>"/> 
+               <input type="text" disabled placeholder="Enter firstname" name="firstName" id="firstName" value="<%=c.getFirstName() %>"/> 
+               <label>old Password * </label>
+               <input type="password" placeholder="Enter old password" name="oldPassword" id="oldPassword" /> 
+               <label>new password * </label>
+               <input type="password" placeholder="Enter new password" name="newPassword" id="newPassword"/> 
                 
             </div>
             
           
-      		
-      		<input type="submit" class="button create account" value="Update Account">
+            
+            <input type="submit" class="button create account" value="Update Account">
               
               </form>
     
@@ -136,6 +134,3 @@ function filterFunction() {
     </script>
   </body>
 </html>
-
-
-    

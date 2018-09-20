@@ -74,7 +74,7 @@ function filterFunction() {
        	<ul class="menu">
        	 <li><a href="/profile">Personal Details</a></li>
             <li><a href="/addressBook">Address Book</a></li>
-            <li><a href="/changePassword">Change Password </a></li>
+            <li><a href="/password">Change Password </a></li>
             <li><a href="/orderHistory">Order History </a></li>
              <li><a href="/">Logout</a></li>
        	<li><a href="/viewCart"><img src="images/cart.png" width="50" height="50"/></a>
@@ -97,37 +97,41 @@ function filterFunction() {
 <!-- Beginning of indexedDB order history -->
 
 <script type = "text/javascript">
-
+   
 var idbSupported = false;
+var db;
+
+document.addEventListener("DOMContentLoaded", function(){
  
- document.addEventListener("DOMContentLoaded", function(){) 
-     
-     if("indexedDB" in window) {
-     	idbSupported = true;
-     }
-         
- if(idbSupported) {
-     var openRequest = indexedDB.open("orderHistory",1);
-
-     openRequest.onupgradeneeded = function(e) {
-         console.log("Upgrading...");
-     }
-
-     openRequest.onsuccess = function(e) {
-         console.log("Success!");
-         db = e.target.result;
-     }
-
-     openRequest.onerror = function(e) {
-         console.log("Error!");
-         console.dir(e);
-     }
-
- } 
- 	
+    if("indexedDB" in window) {
+        idbSupported = true;
+    }
+ 
+    if(idbSupported) {
+        var openRequest = indexedDB.open("test",1);
+ 
+        openRequest.onupgradeneeded = function(e) {
+        	console.log("running onupgradeneeded");
+            var thisDB = e.target.result;
+ 
+            if(!thisDB.objectStoreNames.contains("firstOS")) {
+                thisDB.createObjectStore("firstOS");
+            }
+ 		}
+        
+        openRequest.onsuccess = function(e) {
+            console.log("Success!");
+            db = e.target.result;
+        }
+ 
+        openRequest.onerror = function(e) {
+            console.log("Error");
+            console.dir(e);
+        }
+ 
+    }
+ 
 },false);
-    
-var openRequest = indexedDB.open("orderHistory",1);
     
 </script>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>

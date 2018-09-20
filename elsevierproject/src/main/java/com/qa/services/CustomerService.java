@@ -29,10 +29,11 @@ public class CustomerService {
 	public int updateCustomer(String firstName,
 			String lastName,
 			String email,
-			int customerId){
+			int customerId, 
+			String password){
 		
 		
-		return customerRepository.updateCustomer(firstName, lastName, email, customerId);
+		return customerRepository.updateCustomer(firstName, lastName, email, customerId, password);
 	}
 	
 	
