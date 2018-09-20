@@ -97,48 +97,121 @@ function filterFunction() {
 <!-- Beginning of indexedDB order history -->
 
 <script type = "text/javascript">
-   
-var idbSupported = false;
-var db;
-
-document.addEventListener("DOMContentLoaded", function(){
- 
-    if("indexedDB" in window) {
-        idbSupported = true;
-    }
- 
-    if(idbSupported) {
-        var openRequest = indexedDB.open("test_v",1);
- 
-        openRequest.onupgradeneeded = function(e) {
-        	console.log("running onupgradeneeded");
-            var thisDB = e.target.result;
- 
-            if(!thisDB.objectStoreNames.contains("firstOS")) {
-                thisDB.createObjectStore("firstOS");
-                console.log("firstOS success");
-            }
+         
+         //prefixes of implementation that we want to test
+         window.indexedDB = window.indexedDB || window.mozIndexedDB || 
+         window.webkitIndexedDB || window.msIndexedDB;
+         
+         //prefixes of window.IDB objects
+         window.IDBTransaction = window.IDBTransaction || 
+         window.webkitIDBTransaction || window.msIDBTransaction;
+         window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || 
+         window.msIDBKeyRange
+         
+         if (!window.indexedDB) {
+            window.alert("Your browser doesn't support a stable version of IndexedDB.")
+         }
+         
+         const bookData = [
+            { book_id: "1", title: "Gangsta Granny"},
+            { book_id: "2", title: "Muddle Earth"}
+         ];
+         var db;
+         var request = window.indexedDB.open("orderHistory", 1);
+         
+         request.onerror = function(event) {
+            console.log("error: ");
+         };
+         
+         request.onsuccess = function(event) {
+            db = request.result;
+            console.log("success: "+ db);
+         };
+         </script>
+         
+         <script type = "text/javascript">
+         request.onupgradeneeded = function(event) {
+            var db = event.target.result;
+            var objectStore = db.createObjectStore("book", {keyPath: "book_id"});
             
-            if(!thisDB.objectStoreNames.contains("secondOS")) {
-                thisDB.createObjectStore("secondOS");
+            for (var i in bookData) {
+               objectStore.add(bookData[i]);
+               </script>
+               Successfully set up client side database using IndexedDB API
+               <script type = "text/javascript">
             }
- 		}
-        
-        openRequest.onsuccess = function(e) {
-            console.log("Success!");
-            db = e.target.result;
-        }
- 
-        openRequest.onerror = function(e) {
-            console.log("Error");
-            console.dir(e);
-        }
- 
-    }
- 
-},false);
-    
-</script>
+         }
+         
+         function read() {
+            var transaction = db.transaction(["book"]);
+            var objectStore = transaction.objectStore("book");
+            var request = objectStore.get("1");
+            
+            request.onerror = function(event) {
+               alert("Unable to retrieve data from database!");
+            };
+            
+            request.onsuccess = function(event) {
+               // Do something with the request.result!
+               if(request.result) {
+                  alert("title: " + request.result.title);
+               } else {
+                  alert("Gansta Granny couldn't be found in your history!");
+               }
+            };
+         }
+         
+         function readAll() {
+            var objectStore = db.transaction("book").objectStore("book");
+            
+            objectStore.openCursor().onsuccess = function(event) {
+               var cursor = event.target.result;
+               
+               if (cursor) {
+                  alert("Name for id " + cursor.key + " is " + cursor.value.title);
+                  cursor.continue();
+               } 
+               else {
+                  alert("No more entries!");
+               }
+            };
+         }
+         
+         function add() {
+            var request = db.transaction(["book"], "readwrite")
+            .objectStore("book")
+            .add({ id: "00-03", name: "Kenny", age: 19, email: "kenny@planet.org" });
+            
+            request.onsuccess = function(event) {
+               alert("Kenny has been added to your database.");
+            };
+            
+            request.onerror = function(event) {
+               alert("Unable to add data\r\nKenny is aready exist in your database! ");
+            }
+         }
+         
+         function remove() {
+            var request = db.transaction(["employee"], "readwrite")
+            .objectStore("employee")
+            .delete("00-03");
+            
+            request.onsuccess = function(event) {
+               alert("Kenny's entry has been removed from your database.");
+            };
+         }
+      </script>
+      
+   </head>
+   <!--<body>
+      <button onclick = "read()">Read </button>
+      <button onclick = "readAll()">Read all </button>
+      <button onclick = "add()">Add data </button>
+      <button onclick = "remove()">Delete data </button>
+   </body> -->
+
+
+<!--  End of indeedDB order history -->
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="js/elsevier.js"></script>
     <script>
