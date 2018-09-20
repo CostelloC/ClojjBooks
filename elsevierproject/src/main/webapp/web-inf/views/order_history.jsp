@@ -180,24 +180,24 @@ function filterFunction() {
          function add() {
             var request = db.transaction(["book"], "readwrite")
             .objectStore("book")
-            .add({ id: "00-03", name: "Kenny", age: 19, email: "kenny@planet.org" });
+            .add({ book_id: "3", title: "The Lord of the Rings Deluxe Edition"});
             
             request.onsuccess = function(event) {
-               alert("Kenny has been added to your database.");
+               alert("The Lord of the Rings has been added to your order history.");
             };
             
             request.onerror = function(event) {
-               alert("Unable to add data\r\nKenny is aready exist in your database! ");
+               alert("Unable to add The Lord of the Rings to your order history");
             }
          }
          
          function remove() {
-            var request = db.transaction(["employee"], "readwrite")
-            .objectStore("employee")
-            .delete("00-03");
+            var request = db.transaction(["book"], "readwrite")
+            .objectStore("book")
+            .delete("3");
             
             request.onsuccess = function(event) {
-               alert("Kenny's entry has been removed from your database.");
+               alert("The Lord of the Rings has been removed from your database.");
             };
          }
       </script>
