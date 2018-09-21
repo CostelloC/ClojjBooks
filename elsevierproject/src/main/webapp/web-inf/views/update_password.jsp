@@ -68,20 +68,15 @@ function filterFunction() {
 </script>
       <div class="top-bar-right">
         <ul class="menu">
-        <li><a href="/viewCart"><img src="images/cart.jpg" width="50" height="50"/></a>
+            <li><a href="/profile">Personal Details</a></li>
+            <li><a href="/addressBook">Address Book</a></li>
+            <li><a href="/password">Change Password </a></li>
+            <li><a href="/orderHistory">Order History </a></li>
+             <li><a href="/">Logout</a></li>
+        <li><a href="/viewCart"><img src="images/cart.png" width="50" height="50"/></a>
         
-        </ul>
-             <ul class="dropdown menu" data-dropdown-menu>
-            
-            <li class="has-submenu">
-              <a href="/login.jsp">Login/Register</a>
-              <ul class="submenu menu vertical" data-submenu>
-                <li><a href="/login">Login</a></li>  
-                <li><a href="/register">Register</a></li>
-              </ul>
-            </li>
-          
-          </ul>
+	</li>
+	</ul>
           
       </div>
     </div>

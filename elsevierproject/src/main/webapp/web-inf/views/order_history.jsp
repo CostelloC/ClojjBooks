@@ -136,9 +136,6 @@ function filterFunction() {
             
             for (var i in bookData) {
                objectStore.add(bookData[i]);
-               </script>
-               Successfully set up client side database using IndexedDB API
-               <script type = "text/javascript">
             }
          }
          
